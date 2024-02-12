@@ -1,1 +1,83 @@
 @import '~bootstrap/scss/bootstrap';
+
+$primary_color: #0282f9;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+
+
+     img {
+        width: 80px;
+        vertical-align: middle;
+
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        
+
+        li{          
+            display: inline-block;
+            a{
+                
+                color: #000;
+                padding: 0 10px;
+                line-height: 80px;
+                font-weight: 600;
+
+                position: relative;
+                
+                &.active,
+                &:hover{
+                    color: $primary-color;
+                    
+                    &::after{
+                        content:'';
+                        position: absolute;
+                        bottom: -51px;
+                        left: 10px;
+                        width: calc(100% - 20px);
+                        height: 10px;
+                        background-color: $primary_color;
+                    }
+                }
+
+
+                
+            }
+        }
+    }
+
+    .searchbar{
+        border: none;
+    }
+
+}
